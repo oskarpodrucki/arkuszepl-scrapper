@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arkuszepl-scrapper"
+version = "1.0.0"
+description = "Masowe pobieranie plików PDF i ZIP z serwisu arkusze.pl"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = [
+    "requests>=2.31.0,<3.0.0",
+    "beautifulsoup4>=4.12.0,<5.0.0",
+]
+
+[project.urls]
+Repository = "https://github.com/oskarpodrucki/arkuszepl-scrapper"
+
+[project.scripts]
+arkuszepl-scrapper = "arkuszepl_scrapper:main"
+
+[tool.setuptools]
+py-modules = ["arkuszepl_scrapper"]
